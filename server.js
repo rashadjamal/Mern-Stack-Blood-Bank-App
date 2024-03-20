@@ -3,13 +3,7 @@ const express = require('express');
 //rest object
 const app = express();
 
-
-//routes
-app.get("/", (req, res) => {
-    res.status(200).json({
-        message: "welcome to BLood Bank App",
-    });
-})
+app.use('/app/v1/test', require("./routes/testRoutes"))
 
 //port
 const PORT = 8080;
